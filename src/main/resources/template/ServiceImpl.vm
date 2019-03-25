@@ -1,7 +1,7 @@
 package ${package_name}.rpc.service.impl;
 
-import com.hafele.ehk.common.annotation.BaseService;
-import com.hafele.ehk.common.base.BaseServiceImpl;
+import com.dragon.blog.annotation.BaseService;
+import com.dragon.blog.base.BaseServiceImpl;
 import ${package_name}.dao.mapper.${model}Mapper;
 import ${package_name}.dao.model.${model};
 import ${package_name}.dao.model.${model}Example;
