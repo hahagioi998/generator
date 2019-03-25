@@ -20,6 +20,7 @@ import java.security.SecureRandom;
  */
 public class AESUtil {
 
+    //数据加密常量值（如果要修改此值，休要将所有配置文件中的密码重新生成，否则无法解密）
     private static final String ENCODE_RULES = "hafele";
 
     /**
@@ -121,7 +122,7 @@ public class AESUtil {
         } catch (IOException e) {
             e.printStackTrace();
         } catch (IllegalBlockSizeException e) {
-            throw new RuntimeException("配置文件中的密码需要使用AES加密，请使用com.hafele.ehk.common.util.AESUtil工具类修改这些值！");
+            throw new RuntimeException("配置文件中的密码需要使用AES加密，请使用com.dragon.utils.AESUtil工具类修改这些值！");
             //e.printStackTrace();
         } catch (BadPaddingException e) {
             e.printStackTrace();
@@ -131,8 +132,9 @@ public class AESUtil {
     }
 
     public static void main(String[] args) {
+        //在root处修改你要加密的字符串
         String[] keys = {
-                "", "foobared"
+                "", "root"
         };
         System.out.println("key | AESEncode | AESDecode");
         for (String key : keys) {
