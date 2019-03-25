@@ -1,6 +1,6 @@
 package ${package_name}.rpc.api;
 
-import com.hafele.ehk.common.base.BaseServiceMock;
+import com.dragon.blog.base.BaseServiceMock;
 import ${package_name}.dao.mapper.${model}Mapper;
 import ${package_name}.dao.model.${model};
 import ${package_name}.dao.model.${model}Example;
