@@ -1,6 +1,6 @@
 package ${package_name}.rpc.api;
 
-import com.hafele.ehk.common.base.BaseService;
+import com.dragon.blog.base.BaseService;
 import ${package_name}.dao.model.${model};
 import ${package_name}.dao.model.${model}Example;
 
