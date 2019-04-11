@@ -3,6 +3,7 @@ package com.dragon.utils;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
@@ -13,6 +14,7 @@ import java.util.Map;
  * @author Dragon.Wen
  * @date Oct 17, 2018
  */
+@Component
 public class SpringContextUtil implements ApplicationContextAware {
 
 	private static ApplicationContext context = null;
