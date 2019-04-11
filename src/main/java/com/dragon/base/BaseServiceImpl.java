@@ -1,4 +1,4 @@
-package com.dragon.blog.base;
+package com.dragon.base;
 
 import com.github.pagehelper.PageHelper;
 import com.dragon.db.DataSourceEnum;
