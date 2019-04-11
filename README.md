@@ -16,5 +16,8 @@ generator是一个自动化代码生成工具，使用Maven进行项目管理。
     c.TABLE_PREFIX数据库表名统一前缀
     d.PACKAGE_NAME:包名
     e.LAST_INSERT_ID_TABLES:需要insert后返回主键的表配置
-3、创建(自定义包名).rpc.api
-                       .service.impl    
+3、创建(自定义包名).service
+                   .service.impl   
+                   
+### 注意事项
+1、在SpringBoot项目中需要在 SpringContextUtil添加@Component注解，在ApplicationContextListener添加@Component和@Lazy注解
