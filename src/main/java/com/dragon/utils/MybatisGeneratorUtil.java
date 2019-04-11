@@ -93,18 +93,18 @@ public class MybatisGeneratorUtil {
 
 			String targetProjectSqlMap = basePath + module + "/" + module;
 			context.put("tables", tables);
-			context.put("generator_javaModelGenerator_targetPackage", packageName + ".dao.model");
-			context.put("generator_sqlMapGenerator_targetPackage", packageName + ".dao.mapping");
-			context.put("generator_javaClientGenerator_targetPackage", packageName + ".dao.mapper");
+			context.put("generator_javaModelGenerator_targetPackage", packageName + ".model");
+			context.put("generator_sqlMapGenerator_targetPackage", packageName + ".mapping");
+			context.put("generator_javaClientGenerator_targetPackage", packageName + ".mapper");
 			context.put("targetProject", targetProject);
 			context.put("targetProject_sqlMap", targetProjectSqlMap);
 			context.put("generator_jdbc_password", AESUtil.aesDecode(jdbcPassword));
 			context.put("last_insert_id_tables", lastInsertIdTables);
 			VelocityUtil.generate(generatorConfig_vm, generatorConfigXml, context);
 			// 删除旧代码
-			deleteDir(new File(targetProject + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/dao/model"));
-			deleteDir(new File(targetProject + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/dao/mapping"));
-			deleteDir(new File(targetProjectSqlMap + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/dao/mapper"));
+			deleteDir(new File(targetProject + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/model"));
+			deleteDir(new File(targetProject + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/mapping"));
+			deleteDir(new File(targetProjectSqlMap + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/mapper"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -125,8 +125,8 @@ public class MybatisGeneratorUtil {
 
 		System.out.println("========== 开始生成Service ==========");
 		String ctime = new SimpleDateFormat("yyyy/M/d").format(new Date());
-		String servicePath = basePath + module + "/" + module + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/rpc/api";
-		String serviceImplPath = basePath + module + "/" + module + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/rpc/service/impl";
+		String servicePath = basePath + module + "/" + module + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/service";
+		String serviceImplPath = basePath + module + "/" + module + "/src/main/java/" + packageName.replaceAll("\\.", "/") + "/service/impl";
 		for (int i = 0; i < tables.size(); i++) {
 			String model = StringUtil.lineToHump(ObjectUtils.toString(tables.get(i).get("table_name")));
 			String service = servicePath + "/" + model + "Service.java";
