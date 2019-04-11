@@ -1,7 +1,7 @@
-package com.dragon.blog.dao.mapper;
+package com.dragon.blog.mapper;
 
-import com.dragon.blog.dao.model.BlogMenu;
-import com.dragon.blog.dao.model.BlogMenuExample;
+import com.dragon.blog.model.BlogMenu;
+import com.dragon.blog.model.BlogMenuExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

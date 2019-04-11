@@ -1,4 +1,4 @@
-package com.dragon.blog.dao.model;
+package com.dragon.blog.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;

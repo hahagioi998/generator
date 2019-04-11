@@ -1,11 +1,11 @@
-package com.dragon.blog.rpc.service.impl;
+package com.dragon.blog.service.impl;
 
-import com.dragon.blog.annotation.BaseService;
-import com.dragon.blog.base.BaseServiceImpl;
-import com.dragon.blog.dao.mapper.BlogMenuMapper;
-import com.dragon.blog.dao.model.BlogMenu;
-import com.dragon.blog.dao.model.BlogMenuExample;
-import com.dragon.blog.rpc.api.BlogMenuService;
+import com.dragon.annotation.BaseService;
+import com.dragon.base.BaseServiceImpl;
+import com.dragon.blog.mapper.BlogMenuMapper;
+import com.dragon.blog.model.BlogMenu;
+import com.dragon.blog.model.BlogMenuExample;
+import com.dragon.blog.service.BlogMenuService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
 * BlogMenuService实现
-* Created by Dragon.Wen on 2019/3/25.
+* Created by Dragon.Wen on 2019/4/11.
 */
 @Service
 @Transactional

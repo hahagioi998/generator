@@ -52,16 +52,18 @@
                         password="root" />
 
         <!-- model生成 -->
-        <javaModelGenerator targetPackage="com.dragon.blog.dao.model" targetProject="D:/Project/idea-workspace/generator/generator/src/main/java" />
+        <javaModelGenerator targetPackage="com.dragon.blog.model" targetProject="D:/Project/idea-workspace/generator/generator/src/main/java" />
 
         <!-- MapperXML生成 -->
-        <sqlMapGenerator targetPackage="com.dragon.blog.dao.mapping" targetProject="D:/Project/idea-workspace/generator/generator/src/main/java" />
+        <sqlMapGenerator targetPackage="com.dragon.blog.mapping" targetProject="D:/Project/idea-workspace/generator/generator/src/main/java" />
 
         <!-- Mapper接口生成 -->
-        <javaClientGenerator targetPackage="com.dragon.blog.dao.mapper" targetProject="D:/Project/idea-workspace/generator/generator/src/main/java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="com.dragon.blog.mapper" targetProject="D:/Project/idea-workspace/generator/generator/src/main/java" type="XMLMAPPER" />
 
         <!-- 需要映射的表 -->
-                                    <table tableName="blog_menu" domainObjectName="BlogMenu"></table>
+                                    <table tableName="blog_ad_positions" domainObjectName="BlogAdPositions"></table>
+                                                <table tableName="blog_ads" domainObjectName="BlogAds"></table>
+                                                <table tableName="blog_menu" domainObjectName="BlogMenu"></table>
                     
     </context>
 </generatorConfiguration>
